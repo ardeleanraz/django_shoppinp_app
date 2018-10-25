@@ -1,4 +1,5 @@
 from django.apps import AppConfig
 
-class CompData(AppConfig):
+class CompDataConfig(AppConfig):
     name = 'CompData'
+
