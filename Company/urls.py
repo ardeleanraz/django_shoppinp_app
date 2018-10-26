@@ -19,7 +19,10 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import include, path
 
+from CompData.views import index1, index
+
 urlpatterns = [
-    path('CompData/', include('CompData.urls')),
+    path('sale/', index1, name='sale/'),
     path('admin/', admin.site.urls),
+    path('employee/', index, name='employee/'),
 ]
