@@ -19,7 +19,7 @@ class Product(models.Model):
 
 
 class Sale(models.Model):
-    product_name = models.TextField(default='')
+    product = models.ForeignKey(Product , on_delete=models.SET_NULL,null=True)
     year = models.IntegerField(default=0)
     month = models.IntegerField(default=0)
     day = models.IntegerField(default=0)

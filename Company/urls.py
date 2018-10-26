@@ -22,7 +22,7 @@ from django.urls import include, path
 from CompData.views import index1, index
 
 urlpatterns = [
-    path('sale/', index1, name='sale/'),
+    path('product/', index1, name='sale/'),
     path('admin/', admin.site.urls),
     path('employee/', index, name='employee/'),
 ]
