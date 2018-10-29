@@ -9,4 +9,6 @@ urlpatterns = [
     path('departament_list/', views.print_departament, name='print_departament'),
     path('product_list/', views.print_product, name='product_list/'),
     path('sale_list/', views.print_sale, name='sale_list/'),
-    ]
+    path('max_words/', views.max_words, name='max_words/'),
+    path('best_product_price/', views.best_product_price, name='best_product_price/'),
+]

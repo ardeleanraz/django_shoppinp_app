@@ -17,7 +17,7 @@ class Departament(models.Model):
     manager = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return 'Nume Departament:' + str(self.name) + ',' + 'id_angajat:' + str(self.id) + ',' + str(self.manager)
+        return 'Nume Departament:' + str(self.name) + ',' + 'id_angajat:' + str(self.id) + ',' + str(self.manager.name)
 
 
 class Product(models.Model):
@@ -26,7 +26,7 @@ class Product(models.Model):
     departament = models.ForeignKey(Departament, on_delete=models.SET_NULL, null=True)
 
     def __str__(self):
-        return 'Nume produs:' + str(self.product) + ',' + 'Id_produs:' + str(self.id) + ',' + 'Pret:' + str(
+        return 'Nume produs:' + str(self.name) + ',' + 'Id_produs:' + str(self.id) + ',' + 'Pret:' + str(
             self.price) + ',' + str(self.departament)
 
 
@@ -36,6 +36,7 @@ class Sale(models.Model):
     month = models.IntegerField(default=0)
     day = models.IntegerField(default=0)
     employee = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
+
 
     def __str__(self):
         return str(self.product) + ',' + 'AN/LUNA/ZI:' + str(self.year) + '/' + str(

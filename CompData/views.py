@@ -56,6 +56,38 @@ def print_sale(request):
     for sale in Sale.objects.all():
         total.append('Id:' + str(
             sale.id) + ',' + 'Nume produs:' + sale.product.name + ',' + 'Year/month/day:' + str(sale.year) + '/' + str(
-            sale.month) + '/' + str(sale.day) + ',' + 'Vanzator:' + sale.employee.name + ',' + 'Pret Produs:' + str(sale.product.price))
+            sale.month) + '/' + str(sale.day) + ',' + 'Vanzator:' + sale.employee.name + ',' + 'Pret Produs:' + str(
+            sale.product.price))
 
     return HttpResponse('<br/>'.join(total))
+
+
+def max_words(request):
+    id = ''
+    longest_name = ''
+    telephone_number = ''
+    departament = ''
+    for emp in Employee.objects.all():
+        if len(emp.name)  > len(longest_name):
+            longest_name = emp.name
+            id = str(emp.id)
+            telephone_number = emp.telephone_number
+            departament = emp.departament_name
+
+
+
+    return HttpResponse(id + longest_name + telephone_number+departament)
+
+
+
+def best_product_price(request):
+    name = ''
+    price = 0
+    total = 0
+    for product in Product.objects.all():
+        if product.price > price:
+            price = product.price
+            name = product.departament.name
+    total += price
+
+    return HttpResponse(name + str(total))
