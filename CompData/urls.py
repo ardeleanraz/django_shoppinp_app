@@ -10,5 +10,7 @@ urlpatterns = [
     path('product_list/', views.print_product, name='product_list/'),
     path('sale_list/', views.print_sale, name='sale_list/'),
     path('max_words/', views.max_words, name='max_words/'),
-    path('best_product_price/', views.best_product_price, name='best_product_price/'),
+    path('product_max_price/', views.product_max_price, name='product_max_price/'),
+    path('best_sale/'.views.best_sale, name='best_sale/'),
+    path('best_employee/'.views.best_employee, name='best_employee'),
 ]

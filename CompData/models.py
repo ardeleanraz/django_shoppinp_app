@@ -11,6 +11,12 @@ class Employee(models.Model):
             self.id) + ',' + 'Numar_de_telefon:' + str(
             self.telephone_number) + ',' + 'Departament:' + str(self.departament_name)
 
+    def get_sale_total(self):
+        total = 0
+        employee = Employee.objects.first()
+        for emp in employee.sale_set.all():
+            total += sale.product.price
+        print(total)
 
 class Departament(models.Model):
     name = models.TextField(default='')
@@ -37,7 +43,7 @@ class Sale(models.Model):
     day = models.IntegerField(default=0)
     employee = models.ForeignKey(Employee, on_delete=models.SET_NULL, null=True)
 
-
     def __str__(self):
-        return str(self.product) + ',' + 'AN/LUNA/ZI:' + str(self.year) + '/' + str(
-            self.month) + '/' + str(self.day) + ',' + str(self.employee)
+        return str(self.product.name) + ',' + str(self.product.price) + ',' + 'AN/LUNA/ZI:' + str(
+            self.year) + '/' + str(
+            self.month) + '/' + str(self.day) + ',' + str(self.employee.name)

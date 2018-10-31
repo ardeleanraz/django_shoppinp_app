@@ -68,26 +68,45 @@ def max_words(request):
     telephone_number = ''
     departament = ''
     for emp in Employee.objects.all():
-        if len(emp.name)  > len(longest_name):
+        if len(emp.name) > len(longest_name):
             longest_name = emp.name
             id = str(emp.id)
             telephone_number = emp.telephone_number
             departament = emp.departament_name
 
+    return HttpResponse(id + longest_name + telephone_number + departament)
 
 
-    return HttpResponse(id + longest_name + telephone_number+departament)
-
-
-
-def best_product_price(request):
+def product_max_price(request):
     name = ''
     price = 0
-    total = 0
+    product = ''
     for product in Product.objects.all():
         if product.price > price:
             price = product.price
             name = product.departament.name
-    total += price
+            product = product.name
 
-    return HttpResponse(name + str(total))
+    return HttpResponse(name + product + str(price))
+
+
+def best_sale(request):
+    price = 0
+    name = ''
+    total = 0
+    for sale in Sale.objects.all():
+        if sale.product.price > price:
+            price = sale.product.price
+            name = sale.employee.name
+
+    return HttpResponse(name + str(price))
+
+
+
+
+
+def best_employee(request):
+    winner = Employee.objects.first()
+    for emp in Employee.objects.all():
+        if get_sale_total(emp) > get_sale_total(winner):
+            winner = emp

@@ -19,7 +19,8 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import include, path
 
-from CompData.views import index1, index, print_employee, print_departament, print_product, print_sale, max_words, best_product_price
+from CompData.views import index1, index, print_employee, print_departament, print_product, print_sale, max_words, \
+    product_max_price, best_sale, best_employee
 
 urlpatterns = [
     path('departament_product/', index1, name='departament_product/'),
@@ -30,5 +31,7 @@ urlpatterns = [
     path('product_list/', print_product, name='product_list/'),
     path('sale_list/', print_sale, name='sale_list/'),
     path('max_words/', max_words, name='max_words/'),
-    path('best_product_price/', best_product_price, name='best_product_price/'),
+    path('product_max_price/', product_max_price, name='product__max_price/'),
+    path('best_sale/', best_sale, name='best_sale/'),
+    path('best_employee/',best_employee, name='best_employee'),
 ]
