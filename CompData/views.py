@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from CompData.models import Employee, Sale, Departament, Product
+from CompData.models import Employee, Sale, Departament, Product, get_sale_total
 
 
 def index(request):
@@ -100,7 +100,6 @@ def best_sale(request):
             name = sale.employee.name
 
     return HttpResponse(name + str(price))
-
 
 
 

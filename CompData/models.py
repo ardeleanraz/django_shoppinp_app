@@ -11,12 +11,12 @@ class Employee(models.Model):
             self.id) + ',' + 'Numar_de_telefon:' + str(
             self.telephone_number) + ',' + 'Departament:' + str(self.departament_name)
 
-    def get_sale_total(self):
-        total = 0
-        employee = Employee.objects.first()
-        for emp in employee.sale_set.all():
-            total += sale.product.price
-        print(total)
+def get_sale_total(self):
+    total = 0
+    employee = Employee.objects.first()
+    for sale in employee.sale_set.all():
+        total += sale.product.price
+    print(total)
 
 class Departament(models.Model):
     name = models.TextField(default='')
