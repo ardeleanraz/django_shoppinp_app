@@ -2,7 +2,7 @@ from django.http import HttpResponse
 
 from CompData.models import Employee, Sale, Departament, Product
 from django.template.loader import render_to_string
-from django.shortcuts import render
+
 
 def index(request):
     total = []
@@ -108,5 +108,5 @@ def best_employee(request):
     for emp in Employee.objects.all():
         if emp.get_sale_total() > winner.get_sale_total():
             winner = emp
-
-    return render(render, 'CompData/employee.html')
+        rendered = render_to_string('employee.html', {'best_employee': 'winner'})
+        return rendered
