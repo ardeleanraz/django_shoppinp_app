@@ -5,18 +5,19 @@ class Employee(models.Model):
     name = models.TextField(default='')
     telephone_number = models.CharField(max_length=10)
     departament_name = models.TextField(default='')
+    image = models.ImageField(upload_to='best_employee', blank=True)
 
     def __str__(self):
         return 'Nume_angajat:' + str(self.name) + ',' + 'Id_angajat:' + str(
             self.id) + ',' + 'Numar_de_telefon:' + str(
             self.telephone_number) + ',' + 'Departament:' + str(self.departament_name)
 
-def get_sale_total(self):
-    total = 0
-    employee = Employee.objects.first()
-    for sale in employee.sale_set.all():
-        total += sale.product.price
-    print(total)
+    def get_sale_total(self):
+        total = 0
+        for sale in self.sale_set.all():
+            total += sale.product.price
+        return (total)
+
 
 class Departament(models.Model):
     name = models.TextField(default='')

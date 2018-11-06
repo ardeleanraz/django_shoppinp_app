@@ -13,8 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
 
 from django.contrib import admin
 from django.urls import include, path
@@ -34,4 +32,5 @@ urlpatterns = [
     path('product_max_price/', product_max_price, name='product__max_price/'),
     path('best_sale/', best_sale, name='best_sale/'),
     path('best_employee/',best_employee, name='best_employee'),
+
 ]

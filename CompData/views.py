@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 
-from CompData.models import Employee, Sale, Departament, Product, get_sale_total
-
+from CompData.models import Employee, Sale, Departament, Product
+from django.template.loader import render_to_string
+from django.shortcuts import render
 
 def index(request):
     total = []
@@ -102,10 +103,10 @@ def best_sale(request):
     return HttpResponse(name + str(price))
 
 
-
-
 def best_employee(request):
     winner = Employee.objects.first()
     for emp in Employee.objects.all():
-        if get_sale_total(emp) > get_sale_total(winner):
+        if emp.get_sale_total() > winner.get_sale_total():
             winner = emp
+
+    return render(render, 'CompData/employee.html')
