@@ -13,4 +13,5 @@ urlpatterns = [
     path('product_max_price/', views.product_max_price, name='product_max_price/'),
     path('best_sale/'.views.best_sale, name='best_sale/'),
     path('best_employee/'.views.best_employee, name='best_employee'),
+    path('options/'.views.options , name='options'),
 ]

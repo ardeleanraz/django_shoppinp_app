@@ -1,23 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>BestDepartament</title>
-  </head>
-  <body>
-  <button type="button" class="btn btn-primary btn-lg">BestEmployee</button>
-    <h1>The best departament is:</h1>
+    <title>Options</title>
+</head>
+<body>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/admin">Menu</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Options</li>
+  </ol>
+</nav>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+
+<!-- SPLIT BUTTON FOR EMPLOYEE-->
+<div class="btn-group">
+  <button type="button" class="btn btn-info">EMPLOYEE</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href='/best_employee'>Best Employee</a>
+    <a class="dropdown-item" href='/employee_sale'>Employee Sale</a>
+    <a class="dropdown-item" href='/employee_list'>Employee List</a>
+    <div class="dropdown-divider"></div>
+  </div>
+</div>
+<br/>
+
+<!-- SPLIT BUTTON FOR DEPARTAMENT -->
+<div class="btn-group">
+  <button type="button" class="btn btn-Succes">DEPARTAMENT</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href='/departament_product'>Departament Product</a>
+    <a class="dropdown-item" href='/departament_list'>Departament List</a>
+    <div class="dropdown-divider"></div>
+  </div>
+</div>
+<br/>
+
+<!-- SPLIT BUTTON FOR SALE-->
+<div class="btn-group">
+  <button type="button" class="btn btn-success">SALE</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href='/sale_list'>Sale List</a>
+    <a class="dropdown-item" href='/best_sale'>Best Sale</a>
+    <div class="dropdown-divider"></div>
+  </div>
+</div>
+<br/>
+
+<!-- SPLIT BUTTON FOR PRODUCT -->
+<div class="btn-group">
+  <button type="button" class="btn btn-warning">PRODUCT</button>
+  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href='/product_list'>Product List</a>
+    <a class="dropdown-item" href='/product_max_price'>Product Max Price</a>
+    <div class="dropdown-divider"></div>
+  </div>
+</div>
+<br/>
+
+
+<!--Background Image -->
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'CompData/style.css' %}">
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
 </html>

@@ -108,5 +108,8 @@ def best_employee(request):
     for emp in Employee.objects.all():
         if emp.get_sale_total() > winner.get_sale_total():
             winner = emp
-    rendered = render_to_string('CompData/employee.html', {'best_employee': winner})
-    return rendered
+    return HttpResponse(winner)
+
+def options(request):
+    rendered = render_to_string('CompData/departament.html')
+    return HttpResponse(rendered)
