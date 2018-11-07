@@ -12,68 +12,75 @@
     <title>Options</title>
 </head>
 <body>
+<!--ToolBar -->
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/admin">Menu</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Options</li>
-  </ol>
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Menu</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Options</li>
+    </ol>
 </nav>
 
 
 <!-- SPLIT BUTTON FOR EMPLOYEE-->
+
 <div class="btn-group">
-  <button type="button" class="btn btn-info">EMPLOYEE</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href='/best_employee'>Best Employee</a>
-    <a class="dropdown-item" href='/employee_sale'>Employee Sale</a>
-    <a class="dropdown-item" href='/employee_list'>Employee List</a>
-    <div class="dropdown-divider"></div>
-  </div>
+    <button type="button" class="btn btn-info">EMPLOYEE</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+
+        <a class="dropdown-item" href='/best_employee'>Best Employee</a>
+        <a class="dropdown-item" href='/employee_sale'>Employee Sale</a>
+        <a class="dropdown-item" href='/employee_list'>Employee List</a>
+        <div class="dropdown-divider"></div>
+    </div>
 </div>
 <br/>
 
 <!-- SPLIT BUTTON FOR DEPARTAMENT -->
 <div class="btn-group">
-  <button type="button" class="btn btn-Succes">DEPARTAMENT</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href='/departament_product'>Departament Product</a>
-    <a class="dropdown-item" href='/departament_list'>Departament List</a>
-    <div class="dropdown-divider"></div>
-  </div>
+    <button type="button" class="btn btn-Succes">DEPARTAMENT</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href='/departament_product'>Departament Product</a>
+        <a class="dropdown-item" href='/departament_list'>Departament List</a>
+        <div class="dropdown-divider"></div>
+    </div>
 </div>
 <br/>
 
 <!-- SPLIT BUTTON FOR SALE-->
 <div class="btn-group">
-  <button type="button" class="btn btn-success">SALE</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href='/sale_list'>Sale List</a>
-    <a class="dropdown-item" href='/best_sale'>Best Sale</a>
-    <div class="dropdown-divider"></div>
-  </div>
+    <button type="button" class="btn btn-success">SALE</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href='/sale_list'>Sale List</a>
+        <a class="dropdown-item" href='/best_sale'>Best Sale</a>
+        <div class="dropdown-divider"></div>
+    </div>
 </div>
 <br/>
 
 <!-- SPLIT BUTTON FOR PRODUCT -->
 <div class="btn-group">
-  <button type="button" class="btn btn-warning">PRODUCT</button>
-  <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href='/product_list'>Product List</a>
-    <a class="dropdown-item" href='/product_max_price'>Product Max Price</a>
-    <div class="dropdown-divider"></div>
-  </div>
+    <button type="button" class="btn btn-warning">PRODUCT</button>
+    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href='/product_list'>Product List</a>
+        <a class="dropdown-item" href='/product_max_price'>Product Max Price</a>
+        <div class="dropdown-divider"></div>
+    </div>
 </div>
 <br/>
 
@@ -82,6 +89,14 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'CompData/style.css' %}">
 
+<!--Weather-->
+<div class="card" style="width: 20rem;">
+  <img class="card-img-tp" src="images/sun.jpg" alt="Weather">
+  <div class="card-body">
+    <h5 class="card-title">Cluj-Napoca </h5>
+    <a href="https://weather.com/weather/today/l/46.77,23.62?par=google" class="btn btn-primary">Click here to check the weather.</a>
+  </div>
+</div>
 
 
 
