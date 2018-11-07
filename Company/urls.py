@@ -32,6 +32,6 @@ urlpatterns = [
     path('product_max_price/', product_max_price, name='product__max_price/'),
     path('best_sale/', best_sale, name='best_sale/'),
     path('best_employee/', best_employee, name='best_employee'),
-    path('options/', options, name='options'),
+    path('', options, name='options'),
 
 ]
