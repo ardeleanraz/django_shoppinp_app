@@ -54,7 +54,7 @@ ROOT_URLCONF = 'Company.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['home/PycharmProjects/Company/CompData/templates/CompData/departament.html'],
+        # 'DIRS': ['home/PycharmProjects/Company/CompData/templates/CompData/main.html'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
