@@ -1,0 +1,8 @@
+body {
+    background: white url('images/best_seller.png') no-repeat;
+    background-size: 1000px 400px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+}
+

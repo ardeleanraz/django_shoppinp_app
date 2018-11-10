@@ -30,8 +30,9 @@ def print_employee(request):
     for emp in Employee.objects.all():
         total.append('Nume angajat:' + emp.name + ',' + 'Numar de telefon:' + str(
             emp.telephone_number) + ',' + 'Departament:' + emp.departament_name)
+    rendered = render_to_string('CompData/employee_list.html', {'emp':emp})
 
-    return HttpResponse('<br/>'.join(total))
+    return HttpResponse(rendered)
 
 
 def print_departament(request):
@@ -108,7 +109,7 @@ def best_employee(request):
     for emp in Employee.objects.all():
         if emp.get_sale_total() > winner.get_sale_total():
             winner = emp
-    rendered = render_to_string('CompData/best_employee.html', {'emp': winner, 'numbers': (1, 2, 3)})
+    rendered = render_to_string('CompData/best_employee.html', {'emp': winner})
     return HttpResponse(rendered)
 
 
