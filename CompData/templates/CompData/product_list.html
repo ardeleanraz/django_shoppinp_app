@@ -3,28 +3,32 @@
 
 
 
+
 <!-- List -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="/">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Employee List</li>
+        <li class="breadcrumb-item active" aria-current="page">Product List</li>
     </ol>
 </nav>
 <table class="table">
     <thead>
     <tr>
         <th scope="col">Name</th>
-        <th scope="col">Telephone number</th>
+         <th scope="col">Price</th>
         <th scope="col">Departament</th>
+
     </tr>
     <tbody>
     <tr>
-        {% for employees in employee_list %}
-        <td>{{employees.name}}</td>
-        <td>{{employees.telephone_number}}</td>
-        <td>{{employees.departament_name}}</td>
+        {% for prod in product_list %}
+        <td>{{prod.name}}</td>
+        <td>{{prod.price}}</td>
+        <td>{{prod.departament.name}}</td>
+
     </tr>
 
 
-    {% endfor %}
+
+     {% endfor %}
     {% endblock %}

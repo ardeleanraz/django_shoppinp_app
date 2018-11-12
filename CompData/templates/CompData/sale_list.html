@@ -1,0 +1,31 @@
+{% extends "CompData/base.html" %}
+{% block content %}
+
+
+<!-- List -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sale List</li>
+    </ol>
+</nav>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Year</th>
+         <th scope="col">Month</th>
+         <th scope="col">Day</th>
+        <th scope="col">Employee</th>
+    </tr>
+    <tbody>
+    <tr>
+
+        <td>{{sale.product.name}}</td>
+        <td>{{sale.year}}</td><td>{{sale.month}}</td><td>{{sale.day}}</td>
+        <td>{{sale.employee.name}}</td>
+    </tr>
+
+
+    {% endfor %}
+    {% endblock %}

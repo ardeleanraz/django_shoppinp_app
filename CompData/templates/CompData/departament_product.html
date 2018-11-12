@@ -1,0 +1,32 @@
+{% extends "CompData/base.html" %}
+{% block content %}
+
+
+
+<!-- List -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Departament Product</li>
+    </ol>
+</nav>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Departament Name</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+    </tr>
+    <tbody>
+    <tr>
+        {% for dep in dep_name  %}
+        {% for dep1 in dep_product  %}
+        <td>{{dep.name}}</td>
+        <td>{{dep1.name}}</td>
+        <td>{{dep1.price}}</td>
+    </tr>
+
+
+    {% endfor %}
+    {% endfor %}
+    {% endblock %}
